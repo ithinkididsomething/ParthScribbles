@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Game } from '../types';
 import { Sparkles, Gamepad2, ArrowRight, Play, Eraser, Upload, ShieldCheck, Palette, Shield } from 'lucide-react';
 import { playArcadeSound } from '../lib/arcadeAudio';
+import { resolveCover } from '../lib/covers';
 
 interface WelcomeViewProps {
   games: Game[];
@@ -312,9 +313,9 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
                   }`}
                 >
                   <div className="relative aspect-[16/10] rounded-xl overflow-hidden mb-2 border border-stone-800">
-                    <img
-                      src={game.coverUrl}
-                      alt={game.title}
+                <img
+                  src={resolveCover(game.coverUrl)}
+                  alt={game.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                     />
                     <div className="absolute top-1 left-1 bg-white/90 px-1.5 py-0.5 rounded text-[9px] font-bold text-stone-800">

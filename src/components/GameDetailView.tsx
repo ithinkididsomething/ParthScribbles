@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Play, Heart, Star, ArrowLeft, Send, Sparkles, Gamepad2, ShieldCheck } from 'lucide-react';
 import { Game, Review } from '../types';
 import { useFavourites } from '../context/FavouritesContext';
+import { resolveCover } from '../lib/covers';
 
 interface GameDetailViewProps {
   game: Game;
@@ -65,7 +66,7 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
         {/* Cover Artwork */}
         <div className="lg:col-span-5 relative aspect-[4/3] rounded-2xl overflow-hidden border-2 border-stone-800 shadow-[4px_4px_0px_#1C1917]">
           <img
-            src={game.coverUrl}
+            src={resolveCover(game.coverUrl)}
             alt={game.title}
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover"

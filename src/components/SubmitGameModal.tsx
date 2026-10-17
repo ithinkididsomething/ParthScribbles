@@ -3,17 +3,11 @@ import { X, Upload, CheckCircle2, ShieldCheck, Gamepad2, Sparkles, AlertCircle, 
 import { useFavourites } from '../context/FavouritesContext';
 import { playArcadeSound } from '../lib/arcadeAudio';
 import { Game } from '../types';
+import { PRESET_COVERS } from '../lib/covers';
 
 interface SubmitGameModalProps {
   onClose: () => void;
 }
-
-const PRESET_COVERS = [
-  { name: 'GDG Sketch Runner', url: '/src/assets/images/gdg_runner_poster_cover_1792189082693.jpg' },
-  { name: 'Flappy Margin Birds', url: '/src/assets/images/game_flappy_bird_1792188188452.jpg' },
-  { name: 'Punk Doodle Jumper', url: '/src/assets/images/game_punk_jumper_1792188188557.jpg' },
-  { name: 'Nebula Space Vanguard', url: '/src/assets/images/game_nebula_vanguard_1792188188491.jpg' },
-];
 
 export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => {
   const { submitGame } = useFavourites();

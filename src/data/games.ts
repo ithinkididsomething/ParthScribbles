@@ -1,4 +1,5 @@
 import { Game, Review } from '../types';
+import { resolveCover } from '../lib/covers';
 import gdgCover from '../assets/images/gdg_runner_poster_cover_1792189082693.jpg';
 import flappyCover from '../assets/images/game_flappy_bird_1792188188452.jpg';
 import punkCover from '../assets/images/game_punk_jumper_1792188188557.jpg';

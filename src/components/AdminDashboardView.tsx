@@ -3,6 +3,7 @@ import { useFavourites } from '../context/FavouritesContext';
 import { Game } from '../types';
 import { Shield, CheckCircle, XCircle, ExternalLink, Play, ArrowLeft, LogOut, Clock, Award, Filter, Sparkles, RefreshCw } from 'lucide-react';
 import { playArcadeSound } from '../lib/arcadeAudio';
+import { resolveCover } from '../lib/covers';
 
 interface AdminDashboardViewProps {
   onBack: () => void;
@@ -184,7 +185,9 @@ export const AdminDashboardView: React.FC<AdminDashboardViewProps> = ({ onBack, 
                 {/* Left: Artwork + Details */}
                 <div className="flex items-start gap-5 min-w-0">
                   <div className="relative w-28 h-20 sm:w-36 sm:h-24 rounded-xl overflow-hidden border-2 border-stone-800 shrink-0 bg-stone-200 shadow-[2px_2px_0px_#1C1917]">
-                    <img src={sub.coverUrl} alt={sub.title} className="w-full h-full object-cover" />
+                                      <img
+                    src={resolveCover(sub.coverUrl)}
+                    alt={sub.title} className="w-full h-full object-cover" />
                     <span className="absolute top-1 left-1 bg-white/95 px-1.5 py-0.5 rounded text-[9px] font-bold text-stone-800">
                       {sub.genre}
                     </span>

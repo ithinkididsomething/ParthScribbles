@@ -2,6 +2,7 @@ import React from 'react';
 import { Play, Heart, Star, Sparkles } from 'lucide-react';
 import { Game, Review } from '../types';
 import { useFavourites } from '../context/FavouritesContext';
+import { resolveCover } from '../lib/covers';
 
 interface GameCardProps {
   game: Game;
@@ -30,7 +31,7 @@ export const GameCard: React.FC<GameCardProps> = ({
       {/* Cover Image Container */}
       <div className="relative aspect-[4/3] overflow-hidden bg-stone-200 border-b-2 border-stone-800">
         <img
-          src={game.coverUrl}
+          src={resolveCover(game.coverUrl)}
           alt={game.title}
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
