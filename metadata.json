@@ -1,0 +1,8 @@
+{
+  "name": "Crayon Arcade",
+  "description": "A hand-drawn indie arcade sketchbook for discovering and playing incredible indie games.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

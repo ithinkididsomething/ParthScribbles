@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #FDFBF7;
+    color: #1C1917;
+    font-family: 'Outfit', sans-serif;
+    background-image: radial-gradient(rgba(28, 25, 23, 0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
+
+.font-sketch {
+  font-family: 'Architects Daughter', cursive, sans-serif;
+}
+
+.font-marker {
+  font-family: 'Permanent Marker', cursive, sans-serif;
+}
+
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Sketchy hand-drawn border effect using border-radius morphing */
+.sketchy-box {
+  border: 2.5px solid #1C1917;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  box-shadow: 4px 4px 0px #1C1917;
+  transition: all 0.2s ease;
+}
+
+.sketchy-box:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #EA580C;
+}
+
+.sketchy-btn {
+  border: 2px solid #1C1917;
+  border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
+  box-shadow: 3px 3px 0px #1C1917;
+  transition: all 0.15s ease;
+}
+
+.sketchy-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #C2410C;
+}
+
+.sketchy-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #1C1917;
+}
+
+.paper-card {
+  background-color: #FFFDF9;
+  border: 2px solid #292524;
+  border-radius: 20px;
+  box-shadow: 5px 5px 0px rgba(41, 37, 36, 0.9);
+}
+
+.paper-input {
+  background-color: #FFFDF9;
+  border: 2px solid #292524;
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.paper-input:focus {
+  border-color: #EA580C;
+  box-shadow: 3px 3px 0px rgba(234, 88, 12, 0.4);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FDFBF7;
+  border-left: 2px solid #292524;
+}
+::-webkit-scrollbar-thumb {
+  background: #292524;
+  border-radius: 5px;
+}
