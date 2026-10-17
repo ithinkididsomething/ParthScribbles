@@ -6,6 +6,11 @@ node_modules/
 .pnp.js
 jspm_packages/
 
+# Lockfiles — bun.lock is the single source of truth
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
 # ---------------------------------------------------------------------------
 # Build output
 # ---------------------------------------------------------------------------
