@@ -37,7 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div>
             <span className="text-xl font-marker tracking-wide text-[#1C1917]">PARTHSCRIBBLES</span>
             <span className="block text-[10px] font-sketch text-stone-600 tracking-wider">
-              HAND-DRAWN INDIE SKETCHBOOK
+              INK & ARCADE
             </span>
           </div>
         </button>
@@ -51,7 +51,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             }`}
           >
             <BookOpen className="w-4 h-4" />
-            <span>Welcome Cover</span>
+            <span>Cover</span>
           </button>
 
           <button
@@ -83,7 +83,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             }`}
           >
             <Heart className="w-4 h-4 text-rose-500 fill-rose-500" />
-            <span>Favourites ({favourites.length})</span>
+            <span>Saved ({favourites.length})</span>
           </button>
         </nav>
 
@@ -93,10 +93,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           <button
             onClick={onOpenSubmitGame}
             className="px-3.5 py-1.5 bg-[#EA580C] text-white rounded-xl text-xs font-bold font-sketch flex items-center gap-1.5 shadow-[2px_2px_0px_#1C1917] hover:bg-orange-600 transition-colors cursor-pointer"
-            title="Submit a game for admin review (Verified & Community devs)"
+            title="Submit a game for review"
           >
             <Upload className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Submit Game</span>
+            <span className="hidden sm:inline">Submit</span>
           </button>
 
           {/* Admin Control */}
@@ -108,7 +108,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   ? 'bg-[#1C1917] text-white'
                   : 'bg-emerald-100 hover:bg-emerald-200 text-emerald-900'
               }`}
-              title="Admin Moderation Portal (psa11@gmail.com)"
+              title="Admin portal"
             >
               <Shield className="w-3.5 h-3.5 text-emerald-600" />
               <span className="hidden sm:inline">Admin</span>
@@ -122,7 +122,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               onClick={onOpenAdminLogin}
               className="p-2 bg-[#FFFDF9] hover:bg-stone-100 text-stone-700 rounded-xl border-2 border-stone-800 transition-colors cursor-pointer shadow-[2px_2px_0px_#1C1917]"
-              title="Admin Login (psa11@gmail.com)"
+              title="Admin login"
             >
               <Shield className="w-4 h-4 text-stone-700" />
             </button>
@@ -146,14 +146,14 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="text-left px-3 py-2 rounded-lg hover:bg-stone-100 text-stone-800 flex items-center gap-2"
           >
             <BookOpen className="w-4 h-4 text-[#EA580C]" />
-            <span>Welcome Cover</span>
+            <span>Cover</span>
           </button>
           <button
             onClick={() => handleNavClick('home')}
             className="text-left px-3 py-2 rounded-lg hover:bg-stone-100 text-stone-800 flex items-center gap-2"
           >
             <Gamepad2 className="w-4 h-4 text-[#EA580C]" />
-            <span>Explore Arcade</span>
+            <span>Arcade</span>
           </button>
           <button
             onClick={() => {
@@ -166,14 +166,14 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="text-left px-3 py-2 rounded-lg hover:bg-stone-100 text-stone-800 flex items-center gap-2"
           >
             <Sparkles className="w-4 h-4 text-[#EA580C]" />
-            <span>Game Catalogue</span>
+            <span>Catalogue</span>
           </button>
           <button
             onClick={() => handleNavClick('favourites')}
             className="text-left px-3 py-2 rounded-lg hover:bg-stone-100 text-stone-800 flex items-center gap-2"
           >
             <Heart className="w-4 h-4 text-rose-500 fill-rose-500" />
-            <span>Saved Favourites ({favourites.length})</span>
+            <span>Saved ({favourites.length})</span>
           </button>
           <button
             onClick={() => {
@@ -183,7 +183,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="text-left px-3 py-2 rounded-lg bg-orange-50 text-[#EA580C] font-bold flex items-center gap-2"
           >
             <Upload className="w-4 h-4" />
-            <span>Submit a Game</span>
+            <span>Submit a game</span>
           </button>
           {isAdmin ? (
             <button
@@ -191,7 +191,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="text-left px-3 py-2 rounded-lg bg-emerald-50 text-emerald-800 font-bold flex items-center gap-2"
             >
               <Shield className="w-4 h-4 text-emerald-600" />
-              <span>Admin Moderation Portal ({pendingSubmissions.length} pending)</span>
+              <span>Admin · {pendingSubmissions.length} pending</span>
             </button>
           ) : (
             <button
@@ -202,7 +202,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="text-left px-3 py-2 rounded-lg hover:bg-stone-100 text-stone-600 flex items-center gap-2 text-xs"
             >
               <Shield className="w-3.5 h-3.5" />
-              <span>Admin Login (psa11@gmail.com)</span>
+              <span>Admin login</span>
             </button>
           )}
         </div>

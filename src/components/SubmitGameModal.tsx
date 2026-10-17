@@ -98,9 +98,9 @@ export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => 
             <Upload className="w-6 h-6" />
           </div>
           <div>
-            <h3 className="text-2xl font-marker text-stone-900">Submit Your Indie Game</h3>
+            <h3 className="text-2xl font-marker text-stone-900">Add your game</h3>
             <span className="text-xs font-sketch text-stone-600 block">
-              Open to All Gamers & Developers · Awaits Admin Access & Curation
+              Anyone can submit. It waits for a keeper's nod.
             </span>
           </div>
         </div>
@@ -111,10 +111,10 @@ export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => 
               <CheckCircle2 className="w-9 h-9" />
             </div>
 
-            <h4 className="text-2xl font-marker text-stone-900">Submission Queued for Review!</h4>
+            <h4 className="text-2xl font-marker text-stone-900">In the queue</h4>
             
             <p className="text-sm font-sketch text-stone-700 max-w-md mx-auto leading-relaxed">
-              Awesome job! Your game <strong>"{title}"</strong> has been saved and is currently awaiting admin access. Once reviewed by admin (Parth), it will appear live across ParthScribbles for all players!
+              <strong>"{title}"</strong> is in. Once Parth reads it over, it'll take its page.
             </p>
 
             <div className="pt-4 flex justify-center">
@@ -122,7 +122,7 @@ export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => 
                 onClick={onClose}
                 className="px-6 py-3 bg-[#EA580C] text-white font-bold text-sm sketchy-btn hover:bg-orange-600 transition-colors cursor-pointer"
               >
-                Back to Arcade
+                Back
               </button>
             </div>
           </div>
@@ -138,7 +138,7 @@ export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => 
             {/* Developer Type Selection */}
             <div className="bg-orange-50/80 p-4 rounded-2xl border-2 border-stone-800 space-y-3">
               <label className="block text-xs font-bold uppercase font-marker text-stone-900">
-                Developer Classification
+                You are
               </label>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -151,9 +151,9 @@ export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => 
                       : 'bg-stone-50 border-stone-300 text-stone-500 hover:bg-white'
                   }`}
                 >
-                  <span className="block font-bold text-xs text-stone-900">🎮 Community Indie Creator</span>
+                  <span className="block font-bold text-xs text-stone-900">🎮 Hobbyist</span>
                   <span className="text-[11px] text-stone-600 block mt-0.5">
-                    For gamers, student developers & hobbyists. No password or dev login required.
+                    Gamers, students, first-timers. No login needed.
                   </span>
                 </button>
 
@@ -168,10 +168,10 @@ export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => 
                 >
                   <span className="block font-bold text-xs text-[#EA580C] flex items-center gap-1.5">
                     <ShieldCheck className="w-3.5 h-3.5" />
-                    <span>Verified Developer Request</span>
+                    <span>Verified Developer</span>
                   </span>
                   <span className="text-[11px] text-stone-600 block mt-0.5">
-                    Includes blue verified checkmark upon Admin review.
+                    Ask for the blue check.
                   </span>
                 </button>
               </div>
@@ -179,13 +179,13 @@ export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => 
               {developerType === 'verified' && (
                 <div className="pt-2 border-t border-orange-200">
                   <label className="block text-[11px] font-bold text-stone-700 mb-1">
-                    Studio / Verification Note (Optional)
+                    Proof (optional)
                   </label>
                   <input
                     type="text"
                     value={verificationCode}
                     onChange={(e) => setVerificationCode(e.target.value)}
-                    placeholder="e.g. Studio portfolio, GitHub profile, or verified dev token"
+                    placeholder="Portfolio, GitHub, dev token…"
                     className="paper-input w-full p-2 text-xs text-stone-900 bg-white"
                   />
                 </div>
@@ -196,28 +196,28 @@ export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-xs font-bold uppercase text-stone-700 mb-1">
-                  Game Title *
+                  Title *
                 </label>
                 <input
                   type="text"
                   required
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                  placeholder="e.g. Super Doodle Quest"
+                  placeholder="Super Doodle Quest"
                   className="paper-input w-full p-2.5 text-xs text-stone-900"
                 />
               </div>
 
               <div>
                 <label className="block text-xs font-bold uppercase text-stone-700 mb-1">
-                  Creator / Dev Name *
+                  Dev name *
                 </label>
                 <input
                   type="text"
                   required
                   value={developerName}
                   onChange={(e) => setDeveloperName(e.target.value)}
-                  placeholder="e.g. Alex Studio / DoodleGamer"
+                  placeholder="Alex Studio"
                   className="paper-input w-full p-2.5 text-xs text-stone-900"
                 />
               </div>
@@ -244,7 +244,7 @@ export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => 
 
               <div>
                 <label className="block text-xs font-bold uppercase text-stone-700 mb-1">
-                  Playable Game URL (Embed or Web) *
+                  Game URL *
                 </label>
                 <input
                   type="url"
@@ -260,7 +260,7 @@ export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => 
             {/* Short Description */}
             <div>
               <label className="block text-xs font-bold uppercase text-stone-700 mb-1">
-                Short Description (1-2 sentences) *
+                  Short blurb *
               </label>
               <input
                 type="text"
@@ -275,13 +275,13 @@ export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => 
             {/* Detailed Description */}
             <div>
               <label className="block text-xs font-bold uppercase text-stone-700 mb-1">
-                Full Description & Game Pitch
+                Longer pitch
               </label>
               <textarea
                 rows={3}
                 value={longDescription}
                 onChange={(e) => setLongDescription(e.target.value)}
-                placeholder="Share more about your gameplay mechanics, story, inspirations, and challenges..."
+                placeholder="Mechanics, story, what made you build it…"
                 className="paper-input w-full p-2.5 text-xs text-stone-900"
               />
             </div>
@@ -289,7 +289,7 @@ export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => 
             {/* Controls */}
             <div>
               <label className="block text-xs font-bold uppercase text-stone-700 mb-1">
-                Controls Guide
+                Controls
               </label>
               <input
                 type="text"
@@ -303,7 +303,7 @@ export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => 
             {/* Cover Image Picker */}
             <div>
               <label className="block text-xs font-bold uppercase text-stone-700 mb-1">
-                Select Cover Art Style
+                Cover
               </label>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-2">
                 {PRESET_COVERS.map((preset) => (
@@ -331,7 +331,7 @@ export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => 
                 type="url"
                 value={customCover}
                 onChange={(e) => setCustomCover(e.target.value)}
-                placeholder="Or paste your own custom cover image URL (https://...)"
+                placeholder="Or paste an image URL"
                 className="paper-input w-full p-2 text-xs text-stone-900"
               />
             </div>
@@ -340,7 +340,7 @@ export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => 
             <div className="p-3 bg-stone-100 border-2 border-stone-800 rounded-xl text-xs text-stone-600 flex items-start gap-2">
               <Sparkles className="w-4 h-4 text-[#EA580C] shrink-0 mt-0.5" />
               <span>
-                <strong>Curation Policy:</strong> Submissions await admin review (<code className="font-mono text-stone-800">psa11@gmail.com</code>). Verified developers receive a priority review queue and a verified creator checkmark.
+                <strong>The rule:</strong> every game is read before it goes up. Verified devs skip to the front of the line.
               </span>
             </div>
 
@@ -360,7 +360,7 @@ export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => 
                 className="px-6 py-2.5 bg-[#EA580C] text-white font-bold text-sm sketchy-btn hover:bg-orange-600 transition-colors flex items-center gap-2 cursor-pointer disabled:opacity-50"
               >
                 <Upload className="w-4 h-4" />
-                <span>{isSubmitting ? 'Uploading to Queue...' : 'Submit Game for Review'}</span>
+                <span>{isSubmitting ? 'Sending…' : 'Submit'}</span>
               </button>
             </div>
           </form>

@@ -32,7 +32,7 @@ export const PlayModal: React.FC<PlayModalProps> = ({ game, onClose }) => {
                 {game.title}
               </h3>
               <span className="text-[10px] font-sketch text-stone-400 block -mt-0.5">
-                {playMode === 'canvas' ? '🎨 Hand-Drawn Sketch Arcade' : '🌐 External Live Host'}
+                {playMode === 'canvas' ? '✏️ Sketch Arcade' : '🌐 Live link'}
               </span>
             </div>
           </div>
@@ -64,7 +64,7 @@ export const PlayModal: React.FC<PlayModalProps> = ({ game, onClose }) => {
                 }`}
               >
                 <Monitor className="w-3.5 h-3.5" />
-                <span>External App</span>
+                <span>Live link</span>
               </button>
             </div>
 
@@ -95,7 +95,7 @@ export const PlayModal: React.FC<PlayModalProps> = ({ game, onClose }) => {
               title="Launch directly in new tab"
             >
               <ExternalLink className="w-3.5 h-3.5" />
-              <span className="hidden md:inline">Open New Tab</span>
+              <span className="hidden md:inline">New tab</span>
             </a>
 
             {/* Close Modal Button */}
@@ -124,16 +124,16 @@ export const PlayModal: React.FC<PlayModalProps> = ({ game, onClose }) => {
           ) : (
             <div className="text-center p-8 max-w-md bg-[#FFFDF9] rounded-2xl border-2 border-stone-800 shadow-[4px_4px_0px_#1C1917] mx-4">
               <ShieldAlert className="w-12 h-12 text-[#EA580C] mx-auto mb-4" />
-              <h4 className="text-xl font-marker text-stone-900 mb-2">Direct Embedding Restricted</h4>
+              <h4 className="text-xl font-marker text-stone-900 mb-2">Won't embed</h4>
               <p className="text-sm font-sketch text-stone-600 mb-6">
-                This external server enforces framing security policies. Switch back to our built-in Sketch Arcade or launch directly in a new browser tab!
+                This one blocks framing. Play it here, or open it in a tab.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <button
                   onClick={() => setPlayMode('canvas')}
                   className="w-full sm:w-auto px-5 py-2.5 bg-[#EA580C] text-white font-bold text-xs sketchy-btn hover:bg-orange-600 transition-colors cursor-pointer"
                 >
-                  Play Sketch Arcade
+                  Play here
                 </button>
                 <a
                   href={game.externalUrl}
@@ -142,7 +142,7 @@ export const PlayModal: React.FC<PlayModalProps> = ({ game, onClose }) => {
                   className="w-full sm:w-auto px-5 py-2.5 bg-[#1C1917] text-white font-bold text-xs sketchy-btn hover:bg-stone-800 transition-colors inline-flex items-center justify-center gap-1.5"
                 >
                   <ExternalLink className="w-3.5 h-3.5" />
-                  <span>Launch in Tab</span>
+                  <span>Open tab</span>
                 </a>
               </div>
             </div>
@@ -156,7 +156,7 @@ export const PlayModal: React.FC<PlayModalProps> = ({ game, onClose }) => {
             <span>{game.controls.join(' · ')}</span>
           </div>
           <div className="text-stone-500 hidden sm:block">
-            Tip: Press 'P' to pause/resume during play
+            Tip: 'P' pauses.
           </div>
         </div>
       </div>

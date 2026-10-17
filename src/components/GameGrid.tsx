@@ -53,24 +53,24 @@ export const GameGrid: React.FC<GameGridProps> = ({
       {/* Section Header */}
       <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 mb-10 pb-6 border-b-2 border-stone-800">
         <div>
-          <span className="text-xs font-marker tracking-widest text-[#EA580C] uppercase">SKETCHBOOK CATALOGUE</span>
-          <h2 className="text-3xl font-marker text-stone-900 mt-1">Explore Indie Arcade Games</h2>
+          <span className="text-xs font-marker tracking-widest text-[#EA580C] uppercase">THE CATALOGUE</span>
+          <h2 className="text-3xl font-marker text-stone-900 mt-1">Pick a page</h2>
           <p className="text-sm font-sketch text-stone-600 mt-1">
-            Browse hand-drawn arcade classics, platformers, and space odysseys.
+            Drawn by hand. Free to play.
           </p>
         </div>
 
         {/* Sort Selector */}
         <div className="flex items-center gap-3">
-          <span className="text-xs font-bold text-stone-700 whitespace-nowrap">Sort By:</span>
+          <span className="text-xs font-bold text-stone-700 whitespace-nowrap">Sort</span>
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as SortOption)}
             className="paper-input px-3 py-2 text-xs font-bold text-stone-800 cursor-pointer"
           >
-            <option value="popular">Most Played</option>
-            <option value="rating">Top Rated</option>
-            <option value="newest">Recently Added</option>
+            <option value="popular">Most played</option>
+            <option value="rating">Top rated</option>
+            <option value="newest">Newest</option>
           </select>
         </div>
       </div>
@@ -83,7 +83,7 @@ export const GameGrid: React.FC<GameGridProps> = ({
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-500" />
           <input
             type="text"
-            placeholder="Search games by title, genre, or description..."
+            placeholder="Search..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="paper-input w-full pl-11 pr-4 py-3 text-sm text-stone-900 placeholder:text-stone-400 font-sketch"
@@ -128,9 +128,9 @@ export const GameGrid: React.FC<GameGridProps> = ({
           <div className="w-16 h-16 bg-amber-100 border-2 border-stone-800 rounded-2xl flex items-center justify-center mx-auto mb-4 text-[#EA580C]">
             <Gamepad2 className="w-8 h-8" />
           </div>
-          <h3 className="text-xl font-marker text-stone-900 mb-2">No Sketchbook Games Found</h3>
+          <h3 className="text-xl font-marker text-stone-900 mb-2">Nothing here</h3>
           <p className="text-sm font-sketch text-stone-600 mb-6">
-            We couldn't find any games matching "{searchQuery}" under genre "{selectedGenre}". Try adjusting your filters.
+            No games match "{searchQuery}". Loosen the filters a little.
           </p>
           <button
             onClick={() => {
@@ -139,7 +139,7 @@ export const GameGrid: React.FC<GameGridProps> = ({
             }}
             className="px-5 py-2.5 bg-[#EA580C] text-white font-bold text-sm sketchy-btn hover:bg-orange-600 transition-colors cursor-pointer"
           >
-            Reset Filters
+            Clear
           </button>
         </div>
       )}

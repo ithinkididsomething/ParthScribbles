@@ -118,7 +118,7 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
             ))}
           </div>
           <span className="text-xs font-sketch font-bold tracking-wider text-stone-500 uppercase">
-            SKETCHBOOK NO. 01 · SCALABLE COMMUNITY ARCADE
+            SKETCHBOOK NO. 01
           </span>
         </div>
 
@@ -128,7 +128,7 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
             {/* Hand-drawn Stamped Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-orange-100 border-2 border-stone-800 text-xs font-bold text-[#EA580C] shadow-[2px_2px_0px_#1C1917] rotate-[-1deg]">
               <Sparkles className="w-4 h-4 text-[#EA580C]" />
-              <span>THE ARTIST'S LIVING ARCADE</span>
+              <span>INK · PIXELS · PLAY</span>
             </div>
 
             {/* Giant Title */}
@@ -148,13 +148,13 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
               </svg>
 
               <h2 className="text-lg sm:text-xl font-sketch text-stone-800 mt-3 font-bold">
-                Playable Indie Arcade Games in Living Ink & Crayon.
+                Small games. Wet ink. Play.
               </h2>
             </div>
 
             {/* Editorial Description */}
             <p className="text-base sm:text-lg font-sketch text-stone-700 leading-relaxed max-w-xl">
-              Welcome to <strong>ParthScribbles</strong> — a scalable indie games platform where anyone can play, and normal gamers & developers can submit games. Verified and community creators can submit their games which await Admin access.
+              Play what the margins made. Anyone can add a game — it just has to earn its page.
             </p>
 
             {/* Action Buttons */}
@@ -167,7 +167,7 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
                 className="px-8 py-4 bg-[#EA580C] text-white font-bold text-lg sketchy-btn hover:bg-orange-700 transition-transform hover:scale-105 flex items-center gap-3 shadow-[4px_4px_0px_#1C1917] cursor-pointer"
               >
                 <Gamepad2 className="w-5 h-5" />
-                <span>Open Sketchbook & Play</span>
+                <span>Open the book</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
 
@@ -179,7 +179,7 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
                 className="px-6 py-4 bg-[#FFFDF9] text-stone-900 font-bold text-base sketchy-btn hover:bg-stone-100 transition-colors flex items-center gap-2 cursor-pointer shadow-[2px_2px_0px_#1C1917]"
               >
                 <Upload className="w-4 h-4 text-[#EA580C]" />
-                <span>Submit a Game</span>
+                <span>Add yours</span>
               </button>
             </div>
 
@@ -188,7 +188,7 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
               {/* Badge 1: Live Games Count */}
               <div className="bg-amber-50/90 p-3 rounded-2xl border-2 border-stone-800 rotate-[-1deg] text-center shadow-[2px_2px_0px_#1C1917] flex flex-col justify-center items-center">
                 <span className="block text-2xl font-marker text-[#EA580C]">{games.length}</span>
-                <span className="text-[11px] font-sketch text-stone-700 font-bold">Live Games</span>
+                <span className="text-[11px] font-sketch text-stone-700 font-bold">Games</span>
               </div>
 
               {/* Badge 2: Open Dev (Clickable Link to Submit Game) */}
@@ -199,14 +199,14 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
                   onSubmitGameClick();
                 }}
                 className="bg-blue-50/90 hover:bg-blue-100 p-3 rounded-2xl border-2 border-stone-800 rotate-[1deg] text-center shadow-[2px_2px_0px_#1C1917] hover:shadow-[4px_4px_0px_#1C1917] hover:-translate-y-0.5 transition-all cursor-pointer flex flex-col justify-center items-center group"
-                title="Open Dev: Click to submit your game"
+                title="Submit your game"
               >
                 <span className="block text-lg sm:text-2xl font-marker text-blue-700 group-hover:scale-105 transition-transform flex items-center gap-1">
-                  <span>Open Dev</span>
+                  <span>Submit</span>
                   <Upload className="w-3.5 h-3.5 text-blue-600 hidden sm:inline" />
                 </span>
                 <span className="text-[11px] font-sketch text-blue-900 font-bold underline decoration-dotted">
-                  Submit Game ↗
+                  Your game ↗
                 </span>
               </button>
 
@@ -218,14 +218,14 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
                   onOpenAdminLogin();
                 }}
                 className="bg-emerald-50/90 hover:bg-emerald-100 p-3 rounded-2xl border-2 border-stone-800 rotate-[-1deg] text-center shadow-[2px_2px_0px_#1C1917] hover:shadow-[4px_4px_0px_#1C1917] hover:-translate-y-0.5 transition-all cursor-pointer flex flex-col justify-center items-center group"
-                title="Admin Access: Click to log in as Admin (psa11@gmail.com)"
+                title="Admin login"
               >
                 <span className="block text-lg sm:text-2xl font-marker text-emerald-800 group-hover:scale-105 transition-transform flex items-center gap-1">
-                  <span>Admin Access</span>
+                  <span>Keeper</span>
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 hidden sm:inline" />
                 </span>
                 <span className="text-[11px] font-sketch text-emerald-900 font-bold underline decoration-dotted">
-                  Admin Login ↗
+                  Admin login ↗
                 </span>
               </button>
             </div>
@@ -239,7 +239,7 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
                 <div className="flex items-center gap-2">
                   <Palette className="w-4 h-4 text-[#EA580C]" />
                   <span className="text-xs font-marker uppercase tracking-wider text-stone-900">
-                    Scribble on Parth's Notebook
+                    Scribble here
                   </span>
                 </div>
 
@@ -268,15 +268,15 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
                 />
                 {!hasDoodled && (
                   <div className="absolute inset-0 pointer-events-none flex flex-col items-center justify-center text-stone-400 text-xs font-sketch text-center p-4">
-                    <span className="font-marker text-stone-500 mb-1">✍️ Test Your Crayon Here!</span>
-                    <span>Click and drag mouse or finger to doodle your signature.</span>
+                    <span className="font-marker text-stone-500 mb-1">✍️ Doodle your signature</span>
+                    <span>Drag to draw.</span>
                   </div>
                 )}
               </div>
 
               {/* Crayon Color Selector */}
               <div className="flex items-center justify-between mt-3 pt-2 border-t border-stone-200">
-                <span className="text-[11px] font-sketch text-stone-600">Pick Crayon:</span>
+                <span className="text-[11px] font-sketch text-stone-600">Ink:</span>
                 <div className="flex items-center gap-2">
                   {crayonColors.map((c) => (
                     <button
@@ -341,9 +341,9 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
             <Upload className="w-5 h-5" />
           </div>
           <div>
-            <span className="text-xs font-marker text-stone-900 block">Got an Indie Game or Prototype?</span>
+            <span className="text-xs font-marker text-stone-900 block">Made a game?</span>
             <span className="text-[11px] font-sketch text-stone-600 block">
-              Normal gamers & verified devs can submit games. Reviewed and approved by Admin (psa11@gmail.com).
+              Send it in. I'll take a look.
             </span>
           </div>
         </div>
@@ -357,7 +357,7 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
             className="px-5 py-2.5 bg-[#EA580C] text-white font-bold text-xs sketchy-btn hover:bg-orange-600 transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap"
           >
             <Upload className="w-3.5 h-3.5" />
-            <span>Open Dev · Submit Game</span>
+            <span>Submit a game</span>
           </button>
 
           <button
@@ -368,7 +368,7 @@ export const WelcomeView: React.FC<WelcomeViewProps> = ({
             className="px-5 py-2.5 bg-[#1C1917] text-white font-bold text-xs sketchy-btn hover:bg-stone-800 transition-colors flex items-center gap-1.5 cursor-pointer whitespace-nowrap"
           >
             <Shield className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Admin Access</span>
+            <span>Admin</span>
           </button>
 
           <button

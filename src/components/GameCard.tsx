@@ -65,7 +65,7 @@ export const GameCard: React.FC<GameCardProps> = ({
             className="px-4 py-2.5 bg-[#EA580C] text-white font-bold rounded-xl border-2 border-white shadow-[3px_3px_0px_black] hover:bg-orange-600 transition-transform hover:scale-105 flex items-center gap-2 cursor-pointer"
           >
             <Play className="w-4 h-4 fill-white" />
-            <span>Play Now</span>
+            <span>Play</span>
           </button>
         </div>
       </div>
@@ -109,7 +109,7 @@ export const GameCard: React.FC<GameCardProps> = ({
             onClick={() => onSelectGame(game)}
             className="text-xs font-bold text-stone-800 hover:text-[#EA580C] transition-colors flex items-center gap-1 cursor-pointer"
           >
-            <span>Read reviews & details</span>
+            <span>Details</span>
             <span>→</span>
           </button>
 
@@ -118,7 +118,7 @@ export const GameCard: React.FC<GameCardProps> = ({
             className="px-3.5 py-1.5 bg-[#1C1917] text-[#FFFDF9] text-xs font-bold sketchy-btn hover:bg-stone-800 transition-colors flex items-center gap-1.5 cursor-pointer"
           >
             <Sparkles className="w-3 h-3 text-[#EA580C]" />
-            <span>Launch</span>
+            <span>Play</span>
           </button>
         </div>
 

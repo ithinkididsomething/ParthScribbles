@@ -29,7 +29,7 @@ export const FavouritesView: React.FC<FavouritesViewProps> = ({
         className="mb-8 px-4 py-2 bg-[#FFFDF9] text-stone-800 text-sm font-bold sketchy-btn hover:bg-stone-100 transition-colors flex items-center gap-2 cursor-pointer"
       >
         <ArrowLeft className="w-4 h-4" />
-        <span>Back to Arcade Catalogue</span>
+        <span>Back</span>
       </button>
 
       {/* Header */}
@@ -39,9 +39,9 @@ export const FavouritesView: React.FC<FavouritesViewProps> = ({
             <Heart className="w-6 h-6 fill-white" />
           </div>
           <div>
-            <h1 className="text-3xl font-marker text-stone-900">Saved Favourites Cache</h1>
+            <h1 className="text-3xl font-marker text-stone-900">Your shelf</h1>
             <p className="text-xs font-sketch text-stone-600 mt-1">
-              Stored offline in your browser's localStorage cache ({favouriteGames.length} games saved).
+              Kept in this browser · {favouriteGames.length} saved
             </p>
           </div>
         </div>
@@ -75,7 +75,7 @@ export const FavouritesView: React.FC<FavouritesViewProps> = ({
                   className="px-4 py-2 bg-[#EA580C] text-white text-xs font-bold sketchy-btn hover:bg-orange-600 transition-colors flex items-center gap-1.5 cursor-pointer"
                 >
                   <Play className="w-3.5 h-3.5 fill-white" />
-                  <span>Play Game</span>
+                  <span>Play</span>
                 </button>
 
                 <button
@@ -94,15 +94,15 @@ export const FavouritesView: React.FC<FavouritesViewProps> = ({
           <div className="w-16 h-16 bg-rose-100 border-2 border-stone-800 rounded-2xl flex items-center justify-center mx-auto mb-4 text-rose-600">
             <Heart className="w-8 h-8" />
           </div>
-          <h3 className="text-xl font-marker text-stone-900 mb-2">No Favourites Cached Yet</h3>
+          <h3 className="text-xl font-marker text-stone-900 mb-2">Nothing saved yet</h3>
           <p className="text-sm font-sketch text-stone-600 mb-6">
-            Click the heart icon on any game card while browsing the catalogue to save it to your offline cache.
+            Tap the heart on any game to keep it here.
           </p>
           <button
             onClick={onBack}
             className="px-5 py-2.5 bg-[#EA580C] text-white font-bold text-sm sketchy-btn hover:bg-orange-600 transition-colors cursor-pointer"
           >
-            Explore Arcade Games
+            Browse games
           </button>
         </div>
       )}

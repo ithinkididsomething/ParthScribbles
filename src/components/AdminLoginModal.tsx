@@ -28,7 +28,7 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ onClose, onLog
         onClose();
       }, 700);
     } else {
-      setErrorMsg('Invalid admin credentials. Please check your email and password.');
+      setErrorMsg('Nope. Wrong email or password.');
       playArcadeSound('hit');
     }
   };
@@ -54,9 +54,9 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ onClose, onLog
             <Shield className="w-6 h-6 text-[#EA580C]" />
           </div>
           <div>
-            <h3 className="text-xl font-marker text-stone-900">Admin Control Portal</h3>
+            <h3 className="text-xl font-marker text-stone-900">Admin</h3>
             <span className="text-xs font-sketch text-stone-600 block">
-              ParthScribbles Curation & Review Hub
+              The keeper's door
             </span>
           </div>
         </div>
@@ -64,8 +64,8 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ onClose, onLog
         {isSuccess ? (
           <div className="p-6 text-center space-y-2">
             <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto" />
-            <h4 className="text-lg font-marker text-stone-900">Access Granted!</h4>
-            <p className="text-xs font-sketch text-stone-600">Redirecting to moderation dashboard...</p>
+            <h4 className="text-lg font-marker text-stone-900">Welcome back</h4>
+            <p className="text-xs font-sketch text-stone-600">Opening the desk...</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4 text-xs font-sketch">
@@ -78,7 +78,7 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ onClose, onLog
 
             <div>
               <label className="block font-bold uppercase text-stone-700 mb-1">
-                Admin Email Address
+                Email
               </label>
               <div className="relative">
                 <Mail className="w-4 h-4 text-stone-400 absolute left-3 top-1/2 -translate-y-1/2" />
@@ -87,7 +87,7 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ onClose, onLog
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="psa11@gmail.com"
+                  placeholder="you@studio.com"
                   className="paper-input w-full pl-9 pr-3 py-2.5 text-xs text-stone-900"
                 />
               </div>
@@ -95,7 +95,7 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ onClose, onLog
 
             <div>
               <label className="block font-bold uppercase text-stone-700 mb-1">
-                Admin Password
+                Password
               </label>
               <div className="relative">
                 <Lock className="w-4 h-4 text-stone-400 absolute left-3 top-1/2 -translate-y-1/2" />
@@ -117,7 +117,7 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ onClose, onLog
                 onClick={handleFillDemoAdmin}
                 className="text-[11px] text-[#EA580C] hover:underline font-bold cursor-pointer"
               >
-                Auto-fill Admin (psa11@gmail.com)
+                Autofill
               </button>
             </div>
 
@@ -127,7 +127,7 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ onClose, onLog
                 className="w-full py-3 bg-[#1C1917] text-white font-bold text-sm sketchy-btn hover:bg-stone-800 transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-[3px_3px_0px_#EA580C]"
               >
                 <Shield className="w-4 h-4 text-[#EA580C]" />
-                <span>Log In as Admin</span>
+                <span>Enter</span>
               </button>
             </div>
           </form>

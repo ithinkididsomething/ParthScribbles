@@ -34,7 +34,7 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
   const handleSubmitReview = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!commentInput.trim()) {
-      setReviewError('Please write a review comment.');
+      setReviewError('Say something first.');
       return;
     }
 
@@ -56,7 +56,7 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
         className="mb-8 px-4 py-2 bg-[#FFFDF9] text-stone-800 text-sm font-bold sketchy-btn hover:bg-stone-100 transition-colors flex items-center gap-2 cursor-pointer"
       >
         <ArrowLeft className="w-4 h-4" />
-        <span>Back to Arcade Catalogue</span>
+        <span>Back</span>
       </button>
 
       {/* Hero Header Card */}
@@ -95,11 +95,11 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
               </span>
               {game.developerType === 'verified' ? (
                 <span className="inline-flex items-center gap-1 text-[11px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-200">
-                  <span>✓ Verified Developer</span>
+                  <span>✓ Verified</span>
                 </span>
               ) : (
                 <span className="inline-flex items-center text-[11px] font-sketch text-stone-500 bg-stone-100 px-2 py-0.5 rounded-md">
-                  Community Creator
+                  Community
                 </span>
               )}
             </div>
@@ -112,7 +112,7 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
             <div className="bg-stone-100 border-2 border-stone-800 rounded-2xl p-4 mb-6">
               <h4 className="text-xs font-bold uppercase tracking-wider text-stone-800 mb-2 flex items-center gap-1.5 font-marker">
                 <Gamepad2 className="w-4 h-4 text-[#EA580C]" />
-                <span>Sketchbook Controls</span>
+                <span>Controls</span>
               </h4>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-sketch text-stone-700">
                 {game.controls.map((ctrl, idx) => (
@@ -132,7 +132,7 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
               className="px-6 py-3 bg-[#EA580C] text-white font-bold text-base sketchy-btn hover:bg-orange-700 transition-transform hover:scale-105 flex items-center gap-2.5 shadow-[4px_4px_0px_#1C1917] cursor-pointer"
             >
               <Play className="w-5 h-5 fill-white" />
-              <span>Play Game Now</span>
+              <span>Play</span>
             </button>
 
             <button
@@ -144,7 +144,7 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
               }`}
             >
               <Heart className={`w-4 h-4 ${isFavourite ? 'fill-white' : ''}`} />
-              <span>{isFavourite ? 'Saved in Favourites' : 'Add to Favourites'}</span>
+              <span>{isFavourite ? 'Saved' : 'Save'}</span>
             </button>
           </div>
 
@@ -158,8 +158,8 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
         {/* Left Column: Reviews List */}
         <div className="lg:col-span-7 space-y-6">
           <div className="flex items-center justify-between pb-4 border-b-2 border-stone-800">
-            <h3 className="text-2xl font-marker text-stone-900">Player Reviews</h3>
-            <span className="text-xs font-sketch text-stone-600">{gameReviews.length} reviews cached</span>
+            <h3 className="text-2xl font-marker text-stone-900">Reviews</h3>
+            <span className="text-xs font-sketch text-stone-600">{gameReviews.length}</span>
           </div>
 
           {gameReviews.length > 0 ? (
@@ -199,7 +199,7 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
             </div>
           ) : (
             <div className="paper-card p-8 text-center bg-[#FFFDF9]">
-              <p className="text-sm font-sketch text-stone-600">No reviews yet. Be the first player to sketch a review!</p>
+              <p className="text-sm font-sketch text-stone-600">No reviews yet.</p>
             </div>
           )}
         </div>
@@ -209,17 +209,17 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
           <div className="paper-card p-6 bg-[#FFFDF9] sticky top-24">
             <h3 className="text-xl font-marker text-stone-900 mb-2 flex items-center gap-2">
               <Sparkles className="w-5 h-5 text-[#EA580C]" />
-              <span>Leave a Review</span>
+              <span>Drop a review</span>
             </h3>
             <p className="text-xs font-sketch text-stone-600 mb-6">
-              Share your score and thoughts with the ParthScribbles community.
+              Say what it felt like.
             </p>
 
             <form onSubmit={handleSubmitReview} className="space-y-4">
               {reviewSuccess && (
                 <div className="p-3 bg-emerald-50 border-2 border-emerald-600 rounded-xl text-xs font-bold text-emerald-800 flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                  <span>Review successfully submitted!</span>
+                  <span>Inked. Thanks.</span>
                 </div>
               )}
 
@@ -230,7 +230,7 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
               )}
 
               <div>
-                <label className="block text-xs font-bold text-stone-700 uppercase mb-1">Your Name</label>
+                <label className="block text-xs font-bold text-stone-700 uppercase mb-1">Name</label>
                 <input
                   type="text"
                   value={nameInput}
@@ -241,7 +241,7 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-stone-700 uppercase mb-1">Rating (1 to 5 Stars)</label>
+                <label className="block text-xs font-bold text-stone-700 uppercase mb-1">Rating</label>
                 <div className="flex items-center gap-2">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <button
@@ -260,12 +260,12 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-stone-700 uppercase mb-1">Your Review Comment</label>
+                <label className="block text-xs font-bold text-stone-700 uppercase mb-1">Thoughts</label>
                 <textarea
                   rows={4}
                   value={commentInput}
                   onChange={(e) => setCommentInput(e.target.value)}
-                  placeholder="Describe your gameplay experience..."
+                  placeholder="What did it feel like?"
                   className="paper-input w-full p-3 text-sm text-stone-900 font-sketch"
                 ></textarea>
               </div>
@@ -276,7 +276,7 @@ export const GameDetailView: React.FC<GameDetailViewProps> = ({
                 className="w-full py-3 bg-[#1C1917] text-[#FFFDF9] font-bold text-sm sketchy-btn hover:bg-stone-800 transition-colors flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
               >
                 <Send className="w-4 h-4 text-[#EA580C]" />
-                <span>{isSubmitting ? 'Posting Review to Cloud...' : 'Submit Review'}</span>
+                <span>{isSubmitting ? 'Inking...' : 'Post'}</span>
               </button>
             </form>
           </div>

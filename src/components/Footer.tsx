@@ -21,12 +21,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSubmitGame, onOpenAdminLog
             <span className="text-lg font-marker tracking-wide">PARTHSCRIBBLES</span>
           </div>
           <p className="text-sm font-sketch text-stone-400 leading-relaxed">
-            Parth's hand-drawn indie arcade sketchbook celebrating raw creativity, crayon sketches, and unforgettable browser game masterpieces with real-time community reviews and developer curation.
+            A sketchbook of small games. Play them, ink your thoughts in the margins, or slip in one of your own.
           </p>
         </div>
 
         <div>
-          <h4 className="text-sm font-bold tracking-wider uppercase text-stone-300 mb-4 font-marker">Featured Games</h4>
+          <h4 className="text-sm font-bold tracking-wider uppercase text-stone-300 mb-4 font-marker">On the shelf</h4>
           <ul className="space-y-2 text-sm text-stone-400 font-sketch">
             <li><a href="#games-grid" className="hover:text-[#EA580C] transition-colors">GDG Runner</a></li>
             <li><a href="#games-grid" className="hover:text-[#EA580C] transition-colors">Flappy Bird Arcade</a></li>
@@ -36,7 +36,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSubmitGame, onOpenAdminLog
         </div>
 
         <div>
-          <h4 className="text-sm font-bold tracking-wider uppercase text-stone-300 mb-4 font-marker">Developers & Creators</h4>
+          <h4 className="text-sm font-bold tracking-wider uppercase text-stone-300 mb-4 font-marker">Makers</h4>
           <ul className="space-y-2 text-sm text-stone-400 font-sketch">
             {onOpenSubmitGame && (
               <li>
@@ -45,7 +45,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSubmitGame, onOpenAdminLog
                   className="hover:text-[#EA580C] transition-colors text-left flex items-center gap-1.5 cursor-pointer"
                 >
                   <Upload className="w-3.5 h-3.5 text-[#EA580C]" />
-                  <span>Submit Your Game (Open to All)</span>
+                  <span>Submit a game</span>
                 </button>
               </li>
             )}
@@ -56,34 +56,34 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSubmitGame, onOpenAdminLog
                   className="hover:text-[#EA580C] transition-colors text-left flex items-center gap-1.5 cursor-pointer"
                 >
                   <Shield className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>{isAdmin ? 'Admin Moderation Dashboard' : 'Admin Login (psa11@gmail.com)'}</span>
+                  <span>{isAdmin ? 'Admin desk' : 'Admin login'}</span>
                 </button>
               </li>
             )}
             <li>
               <a href="#games-grid" className="hover:text-[#EA580C] transition-colors">
-                Explore All Genres
+                All genres
               </a>
             </li>
           </ul>
         </div>
 
         <div className="space-y-4">
-          <h4 className="text-sm font-bold tracking-wider uppercase text-stone-300 mb-4 font-marker">Curated Community</h4>
+          <h4 className="text-sm font-bold tracking-wider uppercase text-stone-300 mb-4 font-marker">Keeper's note</h4>
           <p className="text-xs text-stone-400 leading-relaxed">
-            Every submission is reviewed by admin before release. Normal gamers can publish their prototypes, and verified developers receive an official verified badge.
+            Every game gets read before it goes up. Badges are earned, not given.
           </p>
           <div className="flex items-center gap-2 text-xs text-emerald-400 pt-2">
             <ShieldCheck className="w-4 h-4" />
-            <span>Moderation Queue Active</span>
+            <span>Reviewed by hand</span>
           </div>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto border-t border-stone-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500">
-        <p className="font-sketch text-stone-400 font-semibold">Created By Parth Saxena</p>
+        <p className="font-sketch text-stone-400 font-semibold">Parth Saxena</p>
         <p className="flex items-center gap-1 mt-2 sm:mt-0 font-sketch">
-          Crafted with <Heart className="w-3 h-3 text-[#EA580C] fill-[#EA580C]" /> for indie game artists
+          Drawn with <Heart className="w-3 h-3 text-[#EA580C] fill-[#EA580C]" /> for makers
         </p>
       </div>
     </footer>
