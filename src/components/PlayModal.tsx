@@ -9,7 +9,7 @@ interface PlayModalProps {
 }
 
 export const PlayModal: React.FC<PlayModalProps> = ({ game, onClose }) => {
-  const [playMode, setPlayMode] = useState<'canvas' | 'iframe'>('canvas');
+  const [playMode, setPlayMode] = useState<'canvas' | 'iframe'>('iframe');
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [iframeError, setIframeError] = useState(false);

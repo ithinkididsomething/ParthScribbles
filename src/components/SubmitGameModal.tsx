@@ -294,10 +294,10 @@ export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => 
               />
             </div>
 
-            {/* Cover Image Picker */}
+            {/* Cover image Image Picker */}
             <div>
               <label className="block text-xs font-bold uppercase text-stone-700 mb-1">
-                Cover
+                Cover image
               </label>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-2">
                 {PRESET_COVERS.map((preset) => (
@@ -325,7 +325,7 @@ export const SubmitGameModal: React.FC<SubmitGameModalProps> = ({ onClose }) => 
                 type="url"
                 value={customCover}
                 onChange={(e) => setCustomCover(e.target.value)}
-                placeholder="Or paste an image URL"
+                placeholder="Paste image URL"
                 className="paper-input w-full p-2 text-xs text-stone-900"
               />
             </div>
